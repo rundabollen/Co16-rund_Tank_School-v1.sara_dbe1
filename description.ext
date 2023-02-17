@@ -1,0 +1,75 @@
+class Header{gameType =  Coop;};
+
+author = "rund";
+onLoadName = "Tank School V1";
+briefingName = "co15-Tank_School-rund";
+loadScreen = "images\loadscreen.jpg";
+overviewPicture = "images\loadscreen.jpg";
+onLoadMission = "Try not to make a fool of yourself on the first day of school.";
+overviewText = "A Sahrani tank platoon has their first day of school.";
+
+DisabledAi = 1;
+/*
+RESPAWN and DELAY handled via 3DEN editor
+respawn = 1;
+respawnDelay = 2;
+*/
+respawnButton = 1;
+enableDebugConsole = 1;
+respawnOnStart = -1;
+corpseLimit = 100;
+
+class CfgDebriefingSections {
+	class acex_killTracker {
+		title = "Acex Killed Events";
+		variable = "acex_killTracker_outputText";
+	};
+};
+
+class CfgDebriefing {
+
+	class trubb_b_dead_end {
+		title = "BLUFOR retreats!";
+		subtitle = "BLUFOR sustained too large losses!";
+		description = "BLUFOR sustained too large losses!";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+};
+
+class cfgSounds
+{
+	sounds[] = {};
+	class single_whistle_1
+	{ name = "single_whistle";
+	sound[] = {"sounds\singlewhistle.ogg", 1, 1, 800};
+	titles[] = {};
+	};
+
+	 class introsong1
+	{
+		// how the sound is referred to in the editor (e.g. trigger effects)
+		name = "introsong1"; 
+
+		// filename, volume, pitch, distance (optional)
+		sound[] = { "sounds\introsong.ogg", 2, 1};
+
+		// subtitle delay in seconds, subtitle text
+		titles[] = {};
+	};
+
+};
+
+class CfgMusic
+{
+	tracks[] = {};
+	class MyIntro
+	{
+		// display name
+		name	= "My intro music";
+
+		// filename, volume, pitch
+		sound[]	= { "sounds\introsong.ogg", db + 1, 1.0 };
+	};
+};
